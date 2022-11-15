@@ -1,0 +1,21 @@
+// Link to the problem: https://leetcode.com/problems/two-sum/
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+ // My solution is below
+var twoSum = function(nums, target) {
+    const pastNums = {};
+    for (let i = 0; i < nums.length; i++){
+        const currNum = nums[i];
+        const neededNum = target - currNum;
+        const indexTwo = pastNums[neededNum];
+        if (indexTwo != null) {
+            return [indexTwo, i];
+        } else {
+            pastNums[currNum] = i;
+        }
+    }
+    return currNum[i]
+};
